@@ -8,7 +8,7 @@ class PartyFoul::IssueRenderers::Rails < PartyFoul::IssueRenderers::Rack
   end
   
   def comment_options
-    super.merge(test: "test custom value")
+    super.merge(env["party_foul.exception_data"] || {})
   end
 
   # Rails session hash. Filtered parms are respected.

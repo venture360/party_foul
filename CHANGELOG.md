@@ -1,3 +1,6 @@
+## 1.5.beta.3
+ * added ability to define custom exception data with env["party_foul.exception_data"]
+
 ## 1.5.5
  * Remove unused attr whitelisted\_rack\_variables
 
