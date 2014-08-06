@@ -6,6 +6,10 @@ class PartyFoul::IssueRenderers::Rails < PartyFoul::IssueRenderers::Rack
     parameter_filter = ActionDispatch::Http::ParameterFilter.new(env["action_dispatch.parameter_filter"])
     parameter_filter.filter(env['action_dispatch.request.parameters'])
   end
+  
+  def comment_options
+    super.merge(test: "test custom value")
+  end
 
   # Rails session hash. Filtered parms are respected.
   #
